@@ -2,16 +2,5 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-# Specify your gem's dependencies in eleader1.gemspec
+# Specify your gem's dependencies in eleader.gemspec
 gemspec
-
-
-gem 'ffi'
-gem 'guard'
-gem 'minitest'
-gem "guard-bundler"
-gem "guard-rspec"
-gem "guard-minitest"
-gem "pry"
-gem "pry-doc"
-
