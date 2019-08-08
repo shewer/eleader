@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+API_Structt	t4.rb	/^	module API_Structt$/;"	m	class:CodeGen
+CodeGen	t4.rb	/^module CodeGen                   # Ruby wrapper  (your choice)$/;"	m
+Constant_API	t4.rb	/^module Constant_API$/;"	m
+Eleader	lib/eleader.rb	/^module Eleader$/;"	m
+Eleader	lib/eleader/version.rb	/^module Eleader$/;"	m
+EleaderTest	test/eleader_test.rb	/^class EleaderTest < Minitest::Test$/;"	c
+Error	lib/eleader.rb	/^  class Error < StandardError; end$/;"	c	class:Eleader
+Order_record	t4.rb	/^		class Order_record$/;"	c	class:CodeGen.cal_record
+SizeException	t4.rb	/^	class SizeException < RuntimeError$/;"	c	class:CodeGen
+cal_record	t4.rb	/^	def cal_record(record,record_size,head_size)$/;"	f	class:CodeGen
+chk_size	t4.rb	/^	def chk_size(record, record_size ,head_size)$/;"	f	class:CodeGen
+fo_order_unpack	t4.rb	/^		def fo_order_unpack(record)$/;"	f	class:CodeGen.cal_record
+initialize	t4.rb	/^			def initialize(record)$/;"	f	class:CodeGen.cal_record.Order_record
+order_unpack	t4.rb	/^		def order_unpack(record)$/;"	f	class:CodeGen.cal_record
+response_unpack	t4.rb	/^		def response_unpack(record)$/;"	f	class:CodeGen.cal_record
+test_it_does_something_useful	test/eleader_test.rb	/^  def test_it_does_something_useful$/;"	f	class:EleaderTest
+test_that_it_has_a_version_number	test/eleader_test.rb	/^  def test_that_it_has_a_version_number$/;"	f	class:EleaderTest
+to_s	t4.rb	/^			def to_s$/;"	f	class:CodeGen.cal_record.Order_record
+unpack	t4.rb	/^		def unpack(record,record_size,head_size=0)$/;"	f	class:CodeGen.cal_record
