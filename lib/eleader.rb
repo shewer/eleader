@@ -21,12 +21,12 @@ module Eleader
   class API
     include Singleton
     def account(account)
-      @branch=account[:branch]
-      @account=account[:account]
-      @password=account[:password]
-      @id=account[:id]
-      @key_path=account[:key_path]
-      @ca_password=account[:ca_password]
+      @branch=account[:branch] || ""
+      @account=account[:account] || ""
+      @password=account[:password] || ""
+      @id=account[:id] || ""
+      @key_path=account[:key_path] || ""
+      @ca_password=account[:ca_password] || ""
       self
 
 
@@ -108,7 +108,7 @@ module Eleader
     end 
     def fo_unsettled_qry(ord)   #return table1 
       str_ar=[ ord[:flag],ord[:leng],ord[:next],ord[:prev],ord[:gubn],ord[:group_name],@branch,@account,ord[:type_1],
-               ord[:type_2],ord[:time_out] ]
+               ord[:type_2],ord[:time_out] ].map(&:to_s)
       Structs[:table11].parse APIfunction.fo_unsettled_qry(* str_ar)
 
     end 
@@ -126,7 +126,7 @@ module Eleader
     end 
     def future_query(ord)
       str_ar=[@branch,@account,ord[:code],ord[:ord_match_flag],ord[:ord_type],ord[:oct_type],ord[:daily],ord[:start_date],
-              ord[:end_date] ,ord[:preorder],ord[:source] 
+              ord[:end_date] ,ord[:preorder],ord[:source] .map(&:to_s)
       ]
       Structs[:table7].parse APIfunction.fo_order_qry2(* str_ar)
     end 
@@ -145,7 +145,7 @@ module Eleader
     end 
     def future_order(ord)
       str_ar=[ord[:ord_bs],@branch,@account,ord[:code],ord[:price],ord[:amount],ord[:price_type],ord[:ordtype],ord[:octtype]]
-      Structs[:table10].parse  APIfunction.future_order(* str_ar )
+      Structs[:table10].parse  APIfunction.future_order(* str_ar ).map(&:to_s)
     end 
 
     def cancel(ord)
@@ -162,7 +162,7 @@ module Eleader
 
     end 
     def future_cancel(ord)
-      str_ar=[@branch , @account , ord[:code],ord[:ord_seq],ord[:ord_no],ord[:octtype],ord[:pre_order] ]
+      str_ar=[@branch , @account , ord[:code],ord[:ord_seq],ord[:ord_no],ord[:octtype],ord[:pre_order] ].map(&:to_s)
       Structs[:table10].parse APIfunction.future_cancel(* str_ar)
 
     end 
