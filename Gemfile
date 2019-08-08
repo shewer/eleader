@@ -8,7 +8,11 @@ gem "bundler"
 gem "bundle"
 gem "wdm"
 gem "ffi"
-gem "win32console"
+if RUBY_PLATFORM =~ /mingw/
+
+  gem 'win-ffi'
+  gem "win32console"
+end 
 gem "minitest"
 gem "rspec"
 gem "guard"
